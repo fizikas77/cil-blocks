@@ -1,0 +1,152 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.notices {
+	position: relative;
+	padding-top: 60px;
+
+	&__circle {
+		position: absolute;
+		bottom: -60%;
+		left: 0;
+		z-index: -1;
+		width: 90%;
+
+		@media ( width <= 1150px ) {
+			bottom: -40%;
+		}
+
+		@media ( width <= 960px ) {
+			bottom: -20%;
+		}
+
+		@media ( width <= 630px ) {
+			bottom: -10%;
+		}
+
+		@media ( width <= 440px ) {
+			bottom: -5%;
+		}
+
+		svg {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.container--big {
+		position: relative;
+		padding-top: 90px;
+		padding-bottom: 90px;
+		background: var( --color-white );
+		border: 1px solid #d0deff;
+		@media ( width <= 920px ) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media ( width <= 767px ) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__planet {
+		position: absolute;
+		z-index: -1;
+
+		&--1 {
+			top: 0;
+			left: 0;
+
+			@media ( width <= 1170px ) {
+				max-width: 350px;
+			}
+		}
+
+		&--2 {
+			right: 0;
+			bottom: 92px;
+
+			@media ( width <= 1170px ) {
+				bottom: 30px;
+				max-width: 550px;
+			}
+
+			@media ( width <= 767px ) {
+				bottom: 0;
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat( 3, 1fr );
+		gap: 30px;
+
+		@media ( width <= 960px ) {
+			grid-template-columns: repeat( 2, 1fr );
+		}
+
+		@media ( width <= 920px ) {
+			gap: 20px;
+		}
+
+		@media ( width <= 540px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		position: relative;
+		padding: 20px 20px 30px;
+		text-align: center;
+		background: #fff;
+		border: 1px solid #d0deff;
+
+		@include hover {
+			box-shadow: 0 4px 22px rgb( 50 111 98 / 15% );
+		}
+
+		&-img {
+			position: relative;
+			width: 100px;
+			height: 100px;
+			margin: 0 auto 20px;
+		}
+
+		&-title {
+			margin-bottom: 10px;
+			font-size: 24px;
+			@media ( width <= 920px ) {
+				font-size: 23px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 22px;
+			}
+		}
+
+		&-text {
+			line-height: 120%;
+			font-size: 16px;
+			@media ( width <= 920px ) {
+				font-size: 15px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 14px;
+			}
+		}
+
+		&-link {
+			z-index: 1;
+			margin-top: 32px;
+			@media ( width <= 920px ) {
+				margin-top: 30px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 28px;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/lawyer",
+	"title": "Lawyer",
+	"category": "mp-blocks",
+	"icon": "smiley",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"lawyerId": {
+			"type": "number"
+		},
+		"lawyerForm": {
+			"type": "string",
+			"default": "[contact-form-7 id='9f5c90b' title='Book a consultation']"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

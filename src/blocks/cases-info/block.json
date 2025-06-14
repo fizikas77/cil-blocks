@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/cases-info",
+	"title": "Cases Info",
+	"category": "mp-blocks",
+	"icon": "smiley",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"titleLeft": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__left-title"
+		},
+		"paragraphLeft": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__left-paragraph"
+		},
+		"titleRight": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__right-title"
+		},
+		"paragraphRight": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__right-paragraph"
+		},
+		"listRight": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__right-list"
+		},
+		"titleBottom": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__bottom-title"
+		},
+		"paragraphBottom": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__bottom-paragraph"
+		},
+		"titleHighlighted": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__highlighted-title"
+		},
+		"paragraphHighlighted": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__highlighted-paragraph"
+		},
+		"months": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__footer-months"
+		},
+		"date": {
+			"type": "string",
+			"default": "",
+			"selector": ".cases-info__footer-date"
+		},
+		"writer": {
+			"type": "number"
+		},
+		"researcher": {
+			"type": "number"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

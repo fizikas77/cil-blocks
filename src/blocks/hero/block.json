@@ -1,0 +1,74 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/hero",
+	"title": "Hero block",
+	"description": "A hero block for home page",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".hero__title"
+		},
+		"description": {
+			"type": "string",
+			"selector": ".hero__description"
+		},
+		"imageURL": {
+			"type": "string",
+			"attribute": "src",
+			"selector": ".hero__image img"
+		},
+		"imageAlt": {
+			"type": "string",
+			"attribute": "alt",
+			"selector": ".hero__image img"
+		},
+		"imageID": {
+			"type": "number"
+		},
+		"backgroundURL": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "src"
+		},
+		"backgroundID": {
+			"type": "number"
+		},
+		"backgroundAlt": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "alt",
+			"default": "Background image"
+		},
+		"linkOrSlug": {
+			"type": "boolean"
+		},
+		"buttonText": {
+			"type": "string"
+		},
+		"buttonLink": {
+			"type": "string"
+		},
+		"buttonSlug": {
+			"type": "string"
+		},
+		"infoTitle": {
+			"type": "string",
+			"selector": ".hero__info-title"
+		},
+		"infoDescription": {
+			"type": "string",
+			"selector": ".hero__info-description"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

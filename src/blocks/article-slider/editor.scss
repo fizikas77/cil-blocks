@@ -1,0 +1,20 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.interface-interface-skeleton__content {
+	h3.article-slider__item-title {
+		font-size: 16px;
+		font-weight: 700;
+		a {
+			font-size: 16px;
+			font-weight: 700;
+			color: var( --color-title );
+			text-decoration: none;
+
+			@include hover {
+				color: var( --color-blue );
+			}
+		}
+	}
+	.article-slider__item-img img {
+		height: 100%;
+	}
+}

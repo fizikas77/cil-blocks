@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/tiles",
+	"title": "Tiles",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"repeaterFieldData": {
+			"type": "array",
+			"default": [
+				{
+					"title": "",
+					"content": "",
+					"size": ""
+				}
+			]
+		},
+		"showIcon": {
+			"type": "boolean"
+		},
+		"columns": {
+			"type": "string"
+		},
+		"tilePadding": {
+			"type": "string"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

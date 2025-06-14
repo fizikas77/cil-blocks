@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/about",
+  "title": "About",
+  "category": "mp-blocks",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": ".about__title"
+    },
+    "text": {
+      "type": "string",
+      "selector": ".about__text"
+    },
+    "badge": {
+      "type": "string",
+      "selector": ".about__badge"
+    },
+    "imgOneURL": {
+      "type": "string",
+      "attribute": "src",
+      "selector": ".about__image-one img"
+    },
+    "imgOneAlt": {
+      "type": "string",
+      "attribute": "alt",
+      "selector": ".about__image-one img"
+    },
+    "imgOneID": {
+      "type": "number"
+    },
+    "imgTwoURL": {
+      "type": "string",
+      "selector": ".about__image-two img",
+      "attribute": "src"
+    },
+    "imgTwoAlt": {
+      "type": "string",
+      "selector": ".about__image-two img",
+      "attribute": "alt",
+      "default": ""
+    },
+    "imgTwoID": {
+      "type": "number"
+    },
+    "backgroundURL": {
+      "type": "string",
+      "selector": ".about__bg img",
+      "attribute": "src"
+    },
+    "backgroundAlt": {
+      "type": "string",
+      "selector": ".about__bg img",
+      "attribute": "alt",
+      "default": ""
+    },
+    "backgroundID": {
+      "type": "number"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

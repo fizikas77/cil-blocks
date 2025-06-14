@@ -1,0 +1,6 @@
+{
+	"noImplicitReturns": false,
+	"compilerOptions": {
+		"jsx": "react-jsx"
+	}
+}

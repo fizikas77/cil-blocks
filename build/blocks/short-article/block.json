@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/short-article",
+  "title": "Short Article",
+  "category": "mp-blocks",
+  "icon": "smiley",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": "h2"
+    },
+    "text": {
+      "type": "string",
+      "selector": ".short-article__text"
+    },
+    "imageURL": {
+      "type": "string",
+      "selector": ".short-article-img",
+      "attribute": "src"
+    },
+    "imageAlt": {
+      "type": "string",
+      "selector": ".short-article-img",
+      "attribute": "alt"
+    },
+    "imageID": {
+      "type": "number"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

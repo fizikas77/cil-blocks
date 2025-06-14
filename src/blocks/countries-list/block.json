@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/countries-list",
+	"title": "Countries List",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"list": {
+			"type": "string",
+			"selector": ".countries-list"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

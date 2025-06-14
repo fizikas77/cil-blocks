@@ -1,0 +1,139 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.reviews {
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	padding: res( 30px, 50px ) 0;
+	color: var( --color-white );
+	background: var( --color-dark );
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 246px 1fr;
+		gap: 54px;
+		align-items: center;
+
+		@media ( width <= 820px ) {
+			gap: 30px;
+		}
+
+		@media ( width <= 767px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		gap: 14px;
+		justify-content: flex-end;
+		margin-bottom: 24px;
+
+		@media ( width <= 767px ) {
+			justify-content: center;
+			margin-top: 24px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__right {
+		align-self: flex-start;
+		min-width: 0;
+
+		@media ( width <= 767px ) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__swiper {
+		position: relative;
+		min-width: 0;
+		max-width: 100%;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			width: res( 90px, 135px );
+			height: 100%;
+			content: '';
+			background: linear-gradient( 270deg, #0f131d 23.53%, rgb( 15 19 29 / 0% ) 88.82% );
+		}
+	}
+
+	&__info {
+		padding: 50px 24px;
+		text-align: center;
+		background: rgb( 255 255 255 / 10% );
+	}
+
+	&__mark {
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__icon {
+		width: 197px;
+		margin: 0 auto 10px;
+	}
+
+	&__description {
+		font-size: 16px;
+		line-height: 24px;
+
+		a {
+			font-weight: 500;
+		}
+	}
+
+	.trustpilot-logo {
+		max-width: 126px;
+		margin: 15px auto 0;
+	}
+
+	&__slide {
+		@media ( width <= 440px ) {
+			max-width: 270px;
+		}
+
+		&-stars {
+			max-width: 110px;
+			margin-bottom: 10px;
+		}
+
+		&-title {
+			padding-right: 36px;
+			margin-bottom: 12px;
+			overflow: hidden;
+			font-size: 16px;
+			font-weight: 700;
+			text-overflow: ellipsis;
+			text-wrap: nowrap;
+		}
+
+		&-text {
+			display: -webkit-box;
+			overflow: hidden;
+			font-size: 14px;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+
+			p {
+				line-height: 118%;
+			}
+		}
+
+		&-footer {
+			margin-top: 10px;
+			font-size: 14px;
+
+			span {
+				font-weight: 500;
+			}
+		}
+	}
+}

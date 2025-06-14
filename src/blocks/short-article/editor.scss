@@ -1,0 +1,14 @@
+.interface-interface-skeleton__content {
+	h2.short-article-title-on-image {
+		position: absolute;
+		bottom: res( 20px, 48px );
+		left: res( 16px, 41px );
+		max-width: 60%;
+		font-size: res( 20px, 62px );
+		color: var( --color-white );
+
+		@media ( width <= 360px ) {
+			font-size: 18px;
+		}
+	}
+}

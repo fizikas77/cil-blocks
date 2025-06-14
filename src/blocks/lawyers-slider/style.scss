@@ -1,0 +1,26 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+@import '../lawyer/style.scss';
+.lawyers-slider {
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+
+		@media ( width <= 767px ) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		gap: 14px;
+		align-items: center;
+	}
+}

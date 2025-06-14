@@ -1,0 +1,1 @@
+.cil-paragraph{position:relative;z-index:1;font-size:18px}.cil-paragraph__align--left{text-align:left}.cil-paragraph__align--center{text-align:center}.cil-paragraph__align--right{text-align:right}.cil-paragraph__wrap p:not(:last-child){margin-bottom:30px}@media (max-width: 920px){.cil-paragraph{font-size:17px}}@media (max-width: 767px){.cil-paragraph{font-size:16px}}

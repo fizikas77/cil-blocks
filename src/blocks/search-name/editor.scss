@@ -1,0 +1,23 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+button.search-name__call {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	min-width: 250px;
+	max-width: max-content;
+	margin: 0 auto 30px;
+
+	.icon {
+		margin-left: 10px;
+		svg {
+			fill: var( --color-white );
+			transition: fill 0.3s ease;
+		}
+	}
+
+	@include hover {
+		.icon svg {
+			fill: var( --color-blue );
+		}
+	}
+}

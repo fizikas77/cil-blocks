@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/certificate",
+  "title": "Certificate",
+  "category": "mp-blocks",
+  "icon": "smiley",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__title .mp-title .mp-title--with-icon"
+    },
+    "description": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__description"
+    },
+    "buttonLink": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__link",
+      "attribute": "href"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__link"
+    },
+    "imageURL": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__image img",
+      "attribute": "src"
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": "",
+      "selector": ".certificate__image img",
+      "attribute": "alt"
+    },
+    "imageID": {
+      "type": "number"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

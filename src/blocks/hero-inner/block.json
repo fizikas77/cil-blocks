@@ -1,0 +1,89 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/hero-inner",
+	"title": "Hero Inner",
+	"description": "Hero block for inner pages",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".hero__title"
+		},
+		"description": {
+			"type": "string",
+			"selector": ".hero__description"
+		},
+		"photoURL": {
+			"type": "string",
+			"selector": ".hero__image img",
+			"attribute": "src"
+		},
+		"photoAlt": {
+			"type": "string",
+			"selector": ".hero__image img",
+			"attribute": "alt"
+		},
+		"photoID": {
+			"type": "number"
+		},
+		"bgURL": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "src"
+		},
+		"bgAlt": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "alt"
+		},
+		"bgID": {
+			"type": "number"
+		},
+		"linkOrSlug": {
+			"type": "boolean"
+		},
+		"buttonText": {
+			"type": "string"
+		},
+		"buttonLink": {
+			"type": "string"
+		},
+		"buttonSlug": {
+			"type": "string"
+		},
+		"tileOneTitle": {
+			"type": "string",
+			"selector": ".hero__tile--one .hero__tile-title"
+		},
+		"tileOneDescription": {
+			"type": "string",
+			"selector": ".hero__tile--one .hero__tile-description"
+		},
+		"tileTwoTitle": {
+			"type": "string",
+			"selector": ".hero__tile--two .hero__tile-title"
+		},
+		"tileTwoDescription": {
+			"type": "string",
+			"selector": ".hero__tile--two .hero__tile-description"
+		},
+		"tileThreeTitle": {
+			"type": "string",
+			"selector": ".hero__tile--three .hero__tile-title"
+		},
+		"tileThreeDescription": {
+			"type": "string",
+			"selector": ".hero__tile--three .hero__tile-description"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

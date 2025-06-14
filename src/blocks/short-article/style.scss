@@ -1,0 +1,143 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.short-article {
+	padding-top: 90px;
+	@media ( width <= 920px ) {
+		padding-top: 70px;
+	}
+	@media ( width <= 767px ) {
+		padding-top: 50px;
+	}
+
+	.container--big {
+		width: 100%;
+		max-width: 1680px;
+		border-bottom: 1px solid #d0deff;
+		padding-bottom: 90px;
+		@media ( width <= 920px ) {
+			padding-bottom: 70px;
+		}
+		@media ( width <= 767px ) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		width: 206px;
+		top: 41px;
+		left: 41px;
+		@media ( width <= 1040px ) {
+			top: 20px;
+			left: 20px;
+			width: 180px;
+		}
+		@media ( width <= 650px ) {
+			left: 17px;
+			top: 17px;
+			width: 87px;
+		}
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__image {
+		position: relative;
+		max-height: 491px;
+		margin-top: 30px;
+		border-radius: 10px;
+
+		img {
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+
+	&__text {
+		margin-top: 30px;
+
+		p {
+			&:not( :last-child ) {
+				margin-bottom: 30px;
+
+				@media ( width <= 860px ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		@media ( width <= 860px ) {
+			margin-top: 20px;
+		}
+	}
+
+	&-title-on-image {
+		position: absolute;
+		max-width: 60%;
+		bottom: 48px;
+		left: 41px;
+		font-size: 62px;
+		color: var( --color-white );
+		@media ( width <= 1040px ) {
+			font-size: 50px;
+			bottom: 20px;
+			left: 20px;
+		}
+		@media ( width <= 940px ) {
+			font-size: 30px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 20px;
+			left: 17px;
+		}
+
+		@media ( width <= 360px ) {
+			font-size: 18px;
+		}
+	}
+
+	&__planet {
+		position: absolute;
+		right: -278px;
+		bottom: -50px;
+		z-index: -1;
+		display: block;
+
+		@media ( width <= 1760px ) {
+			right: -200px;
+		}
+
+		@media ( width <= 1590px ) {
+			right: -150px;
+			width: 600px;
+		}
+
+		@media ( width <= 1490px ) {
+			right: -100px;
+		}
+
+		@media ( width <= 1390px ) {
+			right: -50px;
+		}
+
+		@media ( width <= 1280px ) {
+			right: -20px;
+		}
+
+		@media ( width <= 1120px ) {
+			width: 500px;
+		}
+
+		@media ( width <= 523px ) {
+			width: 100%;
+		}
+	}
+}
+
+.short-article + .short-article {
+	.short-article__planet {
+		display: none;
+	}
+}

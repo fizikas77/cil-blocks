@@ -1,0 +1,30 @@
+{
+	"name": "cil-blocks",
+	"version": "0.1.0",
+	"author": "Serhii Mykulyn",
+	"browserslist": [
+		"last 3 version"
+	],
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php"
+	},
+	"devDependencies": {
+		"@10up/block-components": "^1.18.1",
+		"@babel/runtime": "^7.24.7",
+		"@svgr/webpack": "^8.1.0",
+		"@wordpress/icons": "^10.0.0",
+		"@wordpress/scripts": "27.2.6",
+		"postcss-comment": "^2.0.0",
+		"postcss-loader": "^8.1.1",
+		"postcss-preset-env": "^9.5.14",
+		"postcss-sort-media-queries": "^5.2.0",
+		"svg-loader": "^0.0.2",
+		"url-loader": "^4.1.1"
+	}
+}

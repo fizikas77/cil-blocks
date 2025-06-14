@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/cil-list-with",
+  "title": "List with title",
+  "category": "mp-blocks",
+  "icon": "smiley",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": ".cil-list-with__title"
+    },
+    "list": {
+      "type": "string",
+      "selector": ".cil-list-with__list"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

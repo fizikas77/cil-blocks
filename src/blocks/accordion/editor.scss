@@ -1,0 +1,45 @@
+.cil-accordion__list {
+	display: block;
+}
+
+.cil-accordion__list--horizontal {
+	.block-editor-block-list__layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		align-items: flex-start;
+
+		@media ( width <= 976px ) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+}
+
+.cil-accordion__list--vertical {
+	.block-editor-block-list__layout {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: flex-start;
+
+		@media ( width <= 976px ) {
+			gap: 20px;
+		}
+	}
+}
+
+.cil-accordion__item-content .block-editor-inner-blocks {
+	.block-editor-block-list__layout {
+		display: block;
+	}
+}
+
+.wp-block-cil-blocks-accordion-item {
+	width: 100%;
+	background: #fff;
+	border: 1px solid #d0deff;
+	border-radius: 4px;
+	box-shadow: 0 4px 22px rgb( 215 226 249 / 55% );
+	transition: border-color 0.3s ease;
+}

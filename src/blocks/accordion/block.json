@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/accordion",
+	"title": "Accordion",
+	"category": "mp-blocks",
+	"icon": "smiley",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"accordionOrientation": {
+			"type": "string",
+			"default": "vertical"
+		},
+		"repeaterAccordionData": {
+			"type": "array",
+			"default": [
+				{
+					"title": ""
+				}
+			]
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

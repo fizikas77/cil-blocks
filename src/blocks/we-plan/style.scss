@@ -1,0 +1,136 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.we-plan {
+	color: var( --color-white );
+
+	.container--big {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		@media ( width <= 920px ) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media ( width <= 767px ) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+		align-items: center;
+
+		@media ( width <= 860px ) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+
+	&__badge {
+		margin-bottom: 24px;
+		@media ( width <= 920px ) {
+			margin-bottom: 22px;
+		}
+		@media ( width <= 767px ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		@media ( width <= 920px ) {
+			margin-bottom: 22px;
+		}
+		@media ( width <= 767px ) {
+			margin-bottom: 20px;
+		}
+
+		&.mp-title {
+			color: var( --color-white );
+		}
+	}
+
+	&__description {
+		p {
+			line-height: 120%;
+
+			&:not( :last-child ) {
+				margin-bottom: 24px;
+				@media ( width <= 920px ) {
+					margin-bottom: 22px;
+				}
+				@media ( width <= 767px ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+
+		@media ( width <= 860px ) {
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		gap: 20px;
+		min-height: 163px;
+		padding: 20px 20px 20px 25px;
+		background: var( --color-black );
+		@media ( width <= 920px ) {
+			padding: 20px 20px 20px 20px;
+		}
+
+		&-count {
+			font-family: var( --font-inter );
+			font-size: 42px;
+			font-weight: 700;
+			line-height: 120%;
+			color: #b5bdd1;
+			@media ( width <= 1024px ) {
+				font-size: 38px;
+			}
+			@media ( width <= 920px ) {
+				font-size: 36px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 32px;
+			}
+		}
+
+		&-title {
+			margin-bottom: 10px;
+			font-family: var( --font-inter );
+			line-height: 120%;
+			font-size: 24px;
+			@media ( width <= 1024px ) {
+				font-size: 22px;
+			}
+			@media ( width <= 920px ) {
+				font-size: 20px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 18px;
+			}
+		}
+
+		&-text {
+			font-family: var( --font-inter );
+			line-height: 131%;
+			font-size: 16px;
+			@media ( width <= 920px ) {
+				font-size: 15px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 14px;
+			}
+		}
+	}
+}

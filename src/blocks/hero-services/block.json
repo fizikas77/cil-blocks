@@ -1,0 +1,52 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/hero-services",
+	"title": "Hero Services",
+	"description": "Hero block for services single page",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".hero__title"
+		},
+		"description": {
+			"type": "string",
+			"selector": ".hero__description"
+		},
+		"bgURL": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "src"
+		},
+		"bgAlt": {
+			"type": "string",
+			"selector": ".hero__bg img",
+			"attribute": "alt"
+		},
+		"bgID": {
+			"type": "number"
+		},
+		"linkOrSlug": {
+			"type": "boolean"
+		},
+		"buttonText": {
+			"type": "string"
+		},
+		"buttonLink": {
+			"type": "string"
+		},
+		"buttonSlug": {
+			"type": "string"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

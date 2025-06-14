@@ -1,0 +1,156 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.services-list {
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr );
+	gap: 30px;
+	padding-top: 47px;
+
+	@media ( width <= 1100px ) {
+		grid-template-columns: repeat( 3, 1fr );
+	}
+
+	@media ( width <= 920px ) {
+		gap: 20px;
+	}
+
+	@media ( width <= 820px ) {
+		grid-template-columns: repeat( 2, 1fr );
+		padding-top: 30px;
+	}
+
+	@media ( width <= 767px ) {
+		padding-top: 20px;
+	}
+
+	@media ( width <= 540px ) {
+		grid-template-columns: 1fr;
+		padding-top: 15px;
+	}
+
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	&__item {
+		min-height: 0;
+		max-height: 63.65px;
+		background: #fff;
+		border: 1px solid #d0deff;
+		transition: all 0.3s ease;
+	}
+
+	&__title {
+		display: block;
+		width: 100%;
+		padding: 20px;
+		overflow: hidden;
+		font-family: var( --font-poppins );
+		font-size: 18px;
+		font-weight: 600;
+		color: var( --color-dark );
+		text-decoration: none;
+		text-overflow: ellipsis;
+		text-wrap: nowrap;
+		transition: color 0.3s ease;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+
+		&-icon {
+			display: flex;
+			flex-shrink: 0;
+			align-items: center;
+			justify-content: center;
+			height: 16px;
+			padding: 20px 20px 20px 15px;
+			cursor: pointer;
+
+			svg {
+				width: 12px;
+				height: 7px;
+				fill: var( --color-dark );
+				transition:
+					fill 0.3s ease,
+					transform 0.3s ease;
+			}
+		}
+	}
+}
+
+.services-sublist {
+	padding: 0 20px 15px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease;
+	transform: scaleY( 0 );
+	transform-origin: top;
+
+	&__item {
+		// padding: 7px 20px;
+
+		&:not( :last-child ) {
+			margin-bottom: 15px;
+		}
+
+		a {
+			display: block;
+			color: var( --color-dark );
+			transition: color 0.3s ease;
+
+			@include hover {
+				color: var( --color-blue );
+			}
+		}
+	}
+}
+
+.services-list__item {
+	@include hover {
+		border-color: var( --color-blue );
+	}
+}
+
+.services-list__head {
+	@include hover {
+		.services-list__title {
+			color: var( --color-blue );
+		}
+
+		.services-list__head-icon {
+			svg {
+				fill: var( --color-blue );
+				transform: rotate( 180deg );
+			}
+		}
+	}
+}
+
+.has-sublist {
+	.services-list__title {
+		padding-right: 0;
+	}
+
+	&--active {
+		max-height: 1000px;
+
+		.services-sublist {
+			// display: block;
+			visibility: visible;
+			opacity: 1;
+			transform: scaleY( 1 );
+		}
+
+		.services-list__title {
+			color: var( --color-blue );
+		}
+
+		.services-list__head-icon {
+			svg {
+				fill: var( --color-blue );
+				transform: rotate( 180deg );
+			}
+		}
+	}
+}

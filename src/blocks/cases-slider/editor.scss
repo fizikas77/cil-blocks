@@ -1,0 +1,54 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.wp-block-cil-blocks-cases-slider {
+	.cases-slider__editor {
+		@media ( width <= 1080px ) {
+			.cases-slider__item {
+				&:nth-child( 3 ) {
+					display: none;
+				}
+			}
+		}
+
+		@media ( width <= 620px ) {
+			.cases-slider__item {
+				&:nth-child( 2 ) {
+					display: none;
+				}
+			}
+		}
+	}
+	.mp-bg {
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		@include abs-center;
+		@include d3;
+
+		&-none {
+			background: rgba( #000, 0.2 );
+		}
+
+		&-over {
+			&::before {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				content: '';
+				background: linear-gradient( 180deg, rgba( #0c0c0c, 0.2 ), rgba( 0 0 0 / 100% ) );
+				opacity: 0.8;
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100% !important;
+			line-height: 0;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

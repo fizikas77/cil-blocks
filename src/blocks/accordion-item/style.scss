@@ -1,0 +1,127 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.cil-accordion__item {
+	width: 100%;
+	background: #fff;
+	border: 1px solid #d0deff;
+	border-radius: 4px;
+	box-shadow: 0 4px 22px rgb( 215 226 249 / 55% );
+	transition: border-color 0.3s ease;
+
+	*[class*='wp-block-'] {
+		width: 100%;
+		margin-top: 30px;
+
+		@media ( width <= 767px ) {
+			margin-top: 20px;
+		}
+	}
+
+	*[class*='wp-block-']:first-child {
+		margin-top: 0;
+	}
+
+	p:not( [class] ) {
+		margin-top: 30px;
+		line-height: 147%;
+		color: #3c4355;
+		font-size: 18px;
+		@media ( width <= 920px ) {
+			font-size: 17px;
+		}
+
+		@media ( width <= 767px ) {
+			margin-top: 20px;
+			font-size: 16px;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&-head {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+		font-family: var( --font-poppins );
+		font-weight: 700;
+		color: #090c10;
+		cursor: pointer;
+		font-size: 18px;
+		@media ( width <= 920px ) {
+			font-size: 17px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 16px;
+		}
+
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+			content: '';
+		}
+	}
+
+	&-btn {
+		position: relative;
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		background: #d0deff;
+		border-radius: 4px;
+
+		svg {
+			position: relative;
+			z-index: 1;
+			fill: #090c10;
+			transition:
+				fill 0.3s ease,
+				transform 0.3s ease;
+		}
+
+		&::after {
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: linear-gradient( 92.83deg, #2a78ff 0%, #184ba3 100% );
+			border-radius: 5px;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+
+			@include abs-center;
+		}
+	}
+
+	&-content {
+		min-height: 0;
+		padding: 10px 20px 30px;
+		font-size: 16px;
+		line-height: 140%;
+		color: #636d86;
+
+		@media ( width <= 767px ) {
+			padding: 0 20px 30px;
+		}
+	}
+}
+
+.cil-accordion__item.faq__item--open {
+	border-color: var( --color-blue );
+
+	.cil-accordion__item-btn {
+		&::after {
+			opacity: 1;
+		}
+
+		svg {
+			fill: var( --color-white );
+			transform: rotate( 180deg );
+		}
+	}
+}

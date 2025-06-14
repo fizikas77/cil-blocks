@@ -1,0 +1,51 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.countries-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr auto;
+	gap: 20px;
+
+	@media ( width <= 860px ) {
+		grid-template-columns: auto auto auto;
+	}
+
+	@media ( width <= 580px ) {
+		grid-template-columns: auto auto;
+	}
+
+	@media ( width <= 440px ) {
+		grid-template-columns: 1fr;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		padding: 4px 5px;
+		font-size: 18px;
+		font-weight: 700;
+
+		&::before {
+			display: block;
+			width: 9px;
+			height: 9px;
+			margin-right: 16px;
+			content: '';
+			background: #b5bdd1;
+			border-radius: 50%;
+		}
+	}
+
+	&--wrap {
+		padding-top: 20px;
+		padding-bottom: 30px;
+
+		& + .cil-paragraph {
+			padding-bottom: 90px;
+			@media ( width <= 920px ) {
+				padding-bottom: 70px;
+			}
+			@media ( width <= 767px ) {
+				padding-bottom: 50px;
+			}
+		}
+	}
+}

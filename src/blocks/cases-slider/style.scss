@@ -1,0 +1,95 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.cases-slider {
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__controls {
+		display: flex;
+		gap: 14px;
+		align-items: center;
+	}
+
+	&__swiper {
+		margin-top: 30px;
+	}
+
+	&__editor {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 30px;
+
+		@media ( width <= 1080px ) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media ( width <= 767px ) {
+			gap: 20px;
+		}
+
+		@media ( width <= 620px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__btn.mp-button--outline {
+		display: block;
+		width: max-content;
+		padding: 12px 32px;
+		margin: 50px auto 0;
+
+		@media ( width <= 620px ) {
+			width: 100%;
+			margin: 30px auto 0;
+			text-align: center;
+		}
+	}
+
+	&__item {
+		position: relative;
+		height: 360px;
+
+		&-content {
+			@include abs-center;
+
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			align-items: flex-start;
+			justify-content: flex-end;
+			width: 100%;
+			height: 100%;
+			padding: 30px;
+
+			@media ( width <= 767px ) {
+				gap: 30px;
+				padding: 30px 20px;
+			}
+		}
+
+		.link-more {
+			margin-top: 0;
+		}
+
+		&-title {
+			font-size: res( 24px, 32px );
+			line-height: 118%;
+			color: var( --color-white );
+			text-decoration: none;
+			transition: color 0.3s ease;
+
+			@include hover {
+				color: var( --color-blue );
+			}
+		}
+	}
+}

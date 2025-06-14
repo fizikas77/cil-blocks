@@ -1,0 +1,13 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.featured-image {
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	& ~ * .cil-page__title {
+		margin-top: 0;
+	}
+
+	img {
+		width: 100%;
+	}
+}

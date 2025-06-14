@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/cases-files",
+  "title": "Cases Files",
+  "category": "mp-blocks",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": ".cases-files__title"
+    },
+    "repeaterFieldData": {
+      "type": "array",
+      "default": [
+        {
+          "name": "",
+          "fileURL": "",
+          "fileID": "",
+          "fileTitle": ""
+        }
+      ]
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

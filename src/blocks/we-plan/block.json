@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/we-plan",
+	"title": "We plan",
+	"category": "mp-blocks",
+	"icon": "smiley",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".we-plan__title"
+		},
+		"badge": {
+			"type": "string",
+			"selector": ".we-plan__badge"
+		},
+		"description": {
+			"type": "string",
+			"selector": ".we-plan__description"
+		},
+		"backgroundURL": {
+			"type": "string",
+			"selector": ".we-plan__bg img",
+			"attribute": "src"
+		},
+		"backgroundAlt": {
+			"type": "string",
+			"selector": ".we-plan__bg img",
+			"attribute": "alt"
+		},
+		"backgroundID": {
+			"type": "number"
+		},
+		"repeaterFieldData": {
+			"type": "array",
+			"default": [
+				{
+					"title": "",
+					"text": ""
+				}
+			]
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

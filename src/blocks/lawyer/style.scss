@@ -1,0 +1,265 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.lawyer-block {
+	margin-top: 90px;
+	background: var( --color-white );
+	@media ( width <= 920px ) {
+		margin-top: 70px;
+	}
+	@media ( width <= 767px ) {
+		margin-top: 50px;
+	}
+
+	& + [class*='wp-block-'] {
+		margin-top: 90px;
+		@media ( width <= 920px ) {
+			margin-top: 70px;
+		}
+		@media ( width <= 767px ) {
+			margin-top: 50px;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		display: grid;
+		grid-template-columns: 317px 1fr;
+		align-items: stretch;
+		background: #fff;
+
+		@media ( width <= 860px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__not_selected {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 200px;
+		background: #eee;
+	}
+
+	&__planet {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+		width: 400px;
+
+		@media ( width <= 860px ) {
+			top: auto;
+			bottom: 0;
+		}
+		@media ( width <= 767px ) {
+			display: none;
+			visibility: hidden;
+		}
+		@media ( width <= 767px ) {
+			@include visually-hidden;
+		}
+	}
+
+	&__soc {
+		position: absolute;
+		right: 0;
+		bottom: 20px;
+		left: 0;
+		width: max-content;
+		padding: 10px;
+		margin-inline: auto;
+		background: rgba( #fff, 0.2 );
+		border-radius: 5px;
+
+		.socials__link {
+			width: 42px;
+			height: 42px;
+			background: var( --color-dark );
+
+			.icon {
+				width: 20px;
+				height: 18px;
+
+				svg {
+					width: 20px;
+					height: 18px;
+					fill: var( --color-blue );
+				}
+			}
+
+			@include hover {
+				background: var( --color-blue );
+
+				svg {
+					fill: var( --color-dark );
+				}
+			}
+		}
+	}
+
+	&__info {
+		position: relative;
+		z-index: 2;
+		padding: 50px;
+		border: 1px solid #d7e2f9;
+
+		@media ( width <= 990px ) {
+			padding: 30px;
+		}
+
+		@media ( width <= 680px ) {
+			padding: 20px;
+		}
+	}
+
+	&__photo {
+		position: relative;
+		min-height: 100%;
+
+		img {
+			min-height: 100%;
+			object-fit: cover;
+			width: 100%;
+
+			@media ( width <= 860px ) {
+				min-width: 100%;
+			}
+		}
+	}
+
+	&__name {
+		display: block;
+		width: max-content;
+		margin-bottom: 30px;
+		font-weight: 700;
+		color: var( --color-title );
+		text-decoration: none;
+		transition: color 0.3s ease;
+		font-size: 32px;
+		@media ( width <= 1024px ) {
+			font-size: 30px;
+		}
+		@media ( width <= 920px ) {
+			font-size: 28px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 24px;
+		}
+
+		@include hover {
+			color: var( --color-blue );
+		}
+
+		@media ( width <= 680px ) {
+			margin-bottom: 20px;
+		}
+
+		@media ( width <= 360px ) {
+			font-size: 20px;
+		}
+	}
+
+	&__position {
+		margin-bottom: 20px;
+		font-weight: 500;
+		color: var( --color-grey );
+		font-size: 24px;
+		@media ( width <= 1024px ) {
+			font-size: 22px;
+		}
+		@media ( width <= 920px ) {
+			font-size: 20px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 18px;
+		}
+	}
+
+	&__excerpt {
+		margin-bottom: 30px;
+		color: var( --color-text );
+		font-size: 18px;
+		@media ( width <= 920px ) {
+			font-size: 17px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 16px;
+		}
+
+		@media ( width <= 680px ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 20px;
+		margin-bottom: 30px;
+
+		@media ( width <= 680px ) {
+			margin-bottom: 20px;
+		}
+
+		@media ( width <= 540px ) {
+			flex-flow: column wrap;
+		}
+
+		&-item {
+			&:not( :last-child ) {
+				margin-right: 60px;
+
+				@media ( width <= 540px ) {
+					margin-right: 0;
+				}
+			}
+
+			span:not( [class] ) {
+				display: block;
+				margin-bottom: 7px;
+				font-size: 16px;
+				font-weight: 700;
+				color: #636d86;
+			}
+
+			a:not( [class] ) {
+				display: block;
+				font-size: 22px;
+				font-weight: 700;
+				text-decoration: none;
+
+				@media ( width <= 360px ) {
+					font-size: 18px;
+				}
+
+				@include hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&__socials {
+		.socials__link {
+			background: var( --color-blue );
+
+			.icon {
+				width: 15px;
+				height: 15px;
+
+				svg {
+					width: 15px;
+					height: 15px;
+					fill: var( --color-white );
+				}
+			}
+
+			@include hover {
+				background: var( --color-dark );
+
+				svg {
+					fill: var( --color-blue );
+				}
+			}
+		}
+	}
+}

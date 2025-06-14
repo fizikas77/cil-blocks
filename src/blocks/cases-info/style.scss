@@ -1,0 +1,199 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.cases-info {
+	padding: 50px;
+	margin-top: 30px;
+	background: var( --color-white );
+	border: 1px solid #d7e2f9;
+
+	h2 {
+		margin-bottom: 30px;
+		font-family: var( --font-poppins );
+		font-size: res( 24px, 32px );
+		font-weight: 700;
+		line-height: 120%;
+
+		@media ( width <= 960px ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	p {
+		font-family: var( --font-poppins );
+		font-size: res( 16px, 18px );
+		line-height: 172%;
+		color: var( --color-text );
+
+		&:not( :last-child ) {
+			margin-bottom: 30px;
+		}
+	}
+
+	ul {
+		padding-left: 18px;
+		font-family: var( --font-poppins );
+		font-size: res( 16px, 18px );
+		line-height: 172%;
+		color: var( --color-text );
+
+		li {
+			&::marker {
+				color: #b5bdd1;
+			}
+
+			&:not( :last-child ) {
+				margin-bottom: 30px;
+
+				@media ( width <= 840px ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	@media ( width <= 960px ) {
+		padding: 30px 20px;
+	}
+
+	&__top {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 65px;
+		padding-bottom: 30px;
+
+		@media ( width <= 840px ) {
+			grid-template-columns: 1fr;
+			gap: 50px;
+		}
+	}
+
+	&__right {
+		&-list {
+			margin-top: 30px;
+			list-style: disc;
+
+			@media ( width <= 767px ) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__bottom {
+		padding-bottom: 30px;
+
+		@media ( width <= 840px ) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__highlighted {
+		padding: 30px;
+		margin-top: 30px;
+		background: var( --color-light-blue );
+
+		@media ( width <= 960px ) {
+			padding: 30px 20px;
+		}
+
+		@media ( width <= 840px ) {
+			margin-top: 50px;
+		}
+
+		h3 {
+			margin-bottom: 30px;
+			font-family: var( --font-poppins );
+			font-size: res( 18px, 24px );
+		}
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+
+		@media ( width <= 767px ) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&-left {
+			margin-right: 30px;
+
+			@media ( width <= 767px ) {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+
+		&-months {
+			margin-bottom: 5px;
+			font-size: 12px;
+			color: var( --color-text );
+		}
+
+		&-date {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			font-weight: 700;
+			color: var( --color-text );
+
+			&::before {
+				display: block;
+				width: 13px;
+				height: 13px;
+				margin-right: 7px;
+				content: '';
+				background-image: url( "data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.75 1.875H10.125V0.875C10.125 0.80625 10.0688 0.75 10 0.75H9.125C9.05625 0.75 9 0.80625 9 0.875V1.875H5V0.875C5 0.80625 4.94375 0.75 4.875 0.75H4C3.93125 0.75 3.875 0.80625 3.875 0.875V1.875H1.25C0.973437 1.875 0.75 2.09844 0.75 2.375V12.75C0.75 13.0266 0.973437 13.25 1.25 13.25H12.75C13.0266 13.25 13.25 13.0266 13.25 12.75V2.375C13.25 2.09844 13.0266 1.875 12.75 1.875ZM12.125 12.125H1.875V6.1875H12.125V12.125ZM1.875 5.125V3H3.875V3.75C3.875 3.81875 3.93125 3.875 4 3.875H4.875C4.94375 3.875 5 3.81875 5 3.75V3H9V3.75C9 3.81875 9.05625 3.875 9.125 3.875H10C10.0688 3.875 10.125 3.81875 10.125 3.75V3H12.125V5.125H1.875Z' fill='%233C4355'/%3E%3C/svg%3E%0A" );
+				background-size: contain;
+			}
+		}
+	}
+
+	&__authors {
+		display: flex;
+		gap: 30px;
+
+		@media ( width <= 550px ) {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			padding: 3px 20px 3px 3px;
+			border: 1px solid #d7e2f9;
+			border-radius: 5px;
+		}
+
+		&-photo {
+			width: 36px;
+			height: 36px;
+			margin-right: 10px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 5px;
+			}
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+
+			span {
+				display: block;
+				font-size: 12px;
+				line-height: 120%;
+				color: var( --color-text );
+			}
+
+			a {
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 120%;
+			}
+		}
+	}
+}

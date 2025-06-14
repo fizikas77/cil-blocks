@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/contacts",
+  "title": "Contacts Us",
+  "category": "mp-blocks",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": ".contacts__title"
+    },
+    "formText": {
+      "type": "string",
+      "selector": ".contacts__right-text"
+    },
+    "formShortCode": {
+      "type": "string",
+      "selector": ".contacts__form"
+    },
+    "backgroundURL": {
+      "type": "string",
+      "selector": ".contacts__bg img",
+      "attribute": "src"
+    },
+    "backgroundAlt": {
+      "type": "string",
+      "selector": ".contacts__bg img",
+      "attribute": "alt"
+    },
+    "backgroundID": {
+      "type": "number"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

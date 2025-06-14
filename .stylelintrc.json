@@ -1,0 +1,9 @@
+{
+	"extends": [ "stylelint-config-standard-scss", "stylelint-config-recess-order" ],
+	"rules": {
+		"no-invalid-position-at-import-rule": null,
+		"selector-class-pattern": null,
+		"scss/at-import-partial-extension": null,
+		"no-descending-specificity": null
+	}
+}

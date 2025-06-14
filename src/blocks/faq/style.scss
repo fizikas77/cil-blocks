@@ -1,0 +1,35 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+@import '../../../../../themes/cil/source/styles/parts/faq';
+
+.block-faq {
+	& + [class*='wp-block-'] {
+		margin-top: 90px;
+		@media ( width <= 920px ) {
+			margin-top: 70px;
+		}
+		@media ( width <= 767px ) {
+			margin-top: 50px;
+		}
+	}
+
+	&__title.mp-title {
+		font-family: var( --font-inter );
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 44px;
+		@media ( width <= 1024px ) {
+			font-size: 40px;
+		}
+		@media ( width <= 920px ) {
+			font-size: 36px;
+			margin-bottom: 30px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+		@media ( width <= 540px ) {
+			font-size: 24px;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/white-container",
+  "title": "Container White",
+  "category": "mp-blocks",
+  "icon": "smiley",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "wide"
+    ]
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

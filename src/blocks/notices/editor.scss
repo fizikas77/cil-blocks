@@ -1,0 +1,22 @@
+.interface-interface-skeleton__content {
+	h3.notices__item-title {
+		margin-bottom: 10px;
+		font-size: 24px;
+		@media ( width <= 920px ) {
+			font-size: 23px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 22px;
+		}
+	}
+	p.notices__item-text {
+		line-height: 120%;
+		font-size: 16px;
+		@media ( width <= 920px ) {
+			font-size: 15px;
+		}
+		@media ( width <= 767px ) {
+			font-size: 14px;
+		}
+	}
+}

@@ -1,0 +1,143 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.heading {
+	position: relative;
+	padding-top: 90px;
+	@media ( width <= 920px ) {
+		padding-top: 50px;
+	}
+	padding-bottom: 14px;
+
+	&-align-center {
+		align-items: center;
+	}
+
+	&-align-top {
+		align-items: flex-start;
+	}
+
+	&-align-bottom {
+		align-items: flex-end;
+	}
+
+	&__badge {
+		margin-bottom: 20px;
+	}
+
+	&__content {
+		@media ( width <= 860px ) {
+			display: contents;
+		}
+	}
+
+	&__top {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		@media ( width <= 860px ) {
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+		}
+	}
+
+	&__right {
+		position: relative;
+		flex-shrink: 0;
+		width: 570px;
+
+		@media ( width <= 1180px ) {
+			flex-shrink: 1;
+			width: 100%;
+		}
+
+		&:has( .cil-list-with ) {
+			@media ( width <= 860px ) {
+				display: block;
+				order: 4;
+				width: 100%;
+			}
+		}
+
+		@media ( width <= 860px ) {
+			display: contents;
+			order: 2;
+			max-width: 570px;
+			margin: 20px auto 0;
+
+			img {
+				margin-top: 20px;
+			}
+		}
+
+		@media ( width <= 375px ) {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		margin-top: 15px;
+
+		@media ( width <= 860px ) {
+			order: 3;
+		}
+
+		@media ( width <= 767px ) {
+			margin-top: 20px;
+		}
+
+		p {
+			font-size: 18px;
+			@media ( width <= 920px ) {
+				font-size: 17px;
+			}
+			@media ( width <= 767px ) {
+				font-size: 16px;
+			}
+			line-height: 147%;
+
+			&:not( :last-child ) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		top: 24%;
+		left: -34%;
+		z-index: -1;
+		height: 569px;
+
+		@media ( width <= 920px ) {
+			height: 370px;
+		}
+
+		@media ( width <= 860px ) {
+			top: 0;
+			height: 273px;
+		}
+		@media ( width <= 640px ) {
+			height: 200px;
+		}
+	}
+}
+
+.heading-image-right {
+	.heading__right {
+		order: -1;
+	}
+}
+
+.cil-page {
+	.wp-block-cil-blocks-heading {
+		padding-top: 0;
+
+		& + [class*='wp-block-'] {
+			margin-top: 90px;
+			@media ( width <= 920px ) {
+				margin-top: 50px;
+			}
+		}
+	}
+}

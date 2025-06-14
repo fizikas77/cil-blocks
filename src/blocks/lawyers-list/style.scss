@@ -1,0 +1,256 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.lawyers-list {
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		background: var( --color-white );
+		border: 1px solid #d7e2f9;
+
+		&:first-child {
+			margin-top: 30px;
+		}
+
+		&:not( :last-child ) {
+			margin-bottom: 30px;
+		}
+
+		@media ( width <= 720px ) {
+			flex-direction: column;
+			padding: 20px;
+		}
+
+		@media ( width <= 360px ) {
+			padding: 10px;
+		}
+	}
+
+	&__left {
+		position: relative;
+		z-index: 1;
+		flex-shrink: 0;
+		width: 317px;
+
+		@media ( width <= 720px ) {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__right {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: stretch;
+		padding: 42px 50px;
+
+		@media ( width <= 1070px ) {
+			padding: 20px 25px;
+		}
+
+		@media ( width <= 940px ) {
+			flex-direction: column;
+		}
+
+		@media ( width <= 720px ) {
+			padding: 0;
+			margin-top: 20px;
+		}
+	}
+
+	&__image {
+		display: block;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&-wrap {
+			position: relative;
+			height: 100%;
+		}
+	}
+
+	&__socials {
+		position: absolute;
+		right: 0;
+		bottom: 44px;
+		left: 0;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: center;
+		width: max-content;
+		padding: 10px;
+		margin: 0 auto;
+		background: rgba( #fff, 0.2 );
+		border-radius: 5px;
+
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 44px;
+			height: 44px;
+			background: var( --color-dark );
+			border-radius: 5px;
+			transition: background 0.3s ease;
+
+			svg {
+				width: 20px;
+				height: 20px;
+				fill: var( --color-blue );
+				transition: fill 0.3s ease;
+			}
+
+			@include hover {
+				background: var( --color-blue );
+
+				svg {
+					fill: var( --color-white );
+				}
+			}
+		}
+	}
+
+	&__name {
+		margin-bottom: 20px;
+		font-size: res( 24px, 32px );
+
+		a {
+			color: var( --color-title );
+			text-decoration: none;
+		}
+	}
+
+	&__spec {
+		margin-bottom: 30px;
+		font-size: res( 18px, 24px );
+		font-weight: 500;
+		color: var( --color-grey );
+
+		@media ( width <= 720px ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__excerpt {
+		max-width: 367px;
+		margin-left: 97px;
+		font-size: 16px;
+		color: var( --color-text );
+
+		@media ( width <= 1190px ) {
+			margin-left: 50px;
+		}
+
+		@media ( width <= 980px ) {
+			margin-left: 25px;
+		}
+
+		@media ( width <= 940px ) {
+			max-width: 100%;
+			margin-top: 30px;
+			margin-left: 0;
+		}
+	}
+
+	&__more {
+		display: flex;
+		align-items: center;
+		width: max-content;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: 500;
+		text-decoration: none;
+
+		&::after {
+			display: block;
+			width: 8px;
+			height: 12px;
+			margin-top: 2px;
+			margin-left: 8px;
+			content: '';
+			background-image: url( "data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.630905 0.431482C0.466868 0.595569 0.374717 0.818088 0.374717 1.05011C0.374717 1.28213 0.466869 1.50465 0.630905 1.66873L4.96216 5.99998L0.630907 10.3312C0.471519 10.4963 0.383324 10.7173 0.385317 10.9467C0.387311 11.1761 0.479334 11.3956 0.641565 11.5578C0.803798 11.7201 1.02326 11.8121 1.25268 11.8141C1.4821 11.8161 1.70313 11.7279 1.86816 11.5685L6.81803 6.61861C6.98207 6.45452 7.07422 6.232 7.07422 5.99998C7.07422 5.76796 6.98207 5.54544 6.81803 5.38136L1.86816 0.431482C1.70407 0.267445 1.48155 0.175294 1.24953 0.175294C1.01751 0.175294 0.794992 0.267445 0.630905 0.431482Z' fill='%232A78FF'/%3E%3C/svg%3E%0A" );
+		}
+
+		@include hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__phone,
+	&__email {
+		span {
+			display: block;
+			margin-bottom: 7px;
+			font-size: 16px;
+			font-weight: 700;
+			color: #636d86;
+		}
+
+		a {
+			font-size: 22px;
+			font-weight: 700;
+			color: var( --color-blue );
+			text-decoration: none;
+
+			@include hover {
+				text-decoration: underline;
+			}
+
+			@media ( width <= 360px ) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__email {
+		margin-top: 20px;
+		margin-bottom: 30px;
+
+		a {
+			text-decoration: underline;
+
+			@include hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__contact {
+		min-width: 202px;
+		text-align: center;
+
+		@media ( width <= 720px ) {
+			width: 100%;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		width: 70%;
+
+		@media ( width <= 720px ) {
+			top: auto;
+			width: 100%;
+			height: 50%;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}

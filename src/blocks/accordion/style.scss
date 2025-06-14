@@ -1,0 +1,39 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.cil-accordion {
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	*[class*='wp-block-'] {
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+		gap: 30px;
+		align-items: flex-start;
+
+		@media ( width <= 976px ) {
+			gap: 20px;
+		}
+
+		&--vertical {
+			flex-direction: column;
+		}
+
+		&--horizontal {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: flex-start;
+
+			@media ( width <= 976px ) {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+		}
+	}
+
+	.wp-block-cil-blocks-accordion-item {
+		margin-top: 0 !important;
+	}
+}

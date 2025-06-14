@@ -1,0 +1,39 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.cil-list-with {
+	&__title {
+		margin-bottom: 24px;
+		font-size: 22px;
+		font-weight: 500;
+
+		@media ( width <= 860px ) {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	}
+
+	&__list {
+		li {
+			position: relative;
+			padding-left: 29px;
+
+			&::before {
+				position: absolute;
+				top: 7px;
+				left: 0;
+				display: block;
+				width: 17px;
+				height: 12px;
+				content: '';
+				background-image: url( "data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6442 0.352164C17.1186 0.820965 17.1186 1.57855 16.6442 2.04735L6.9294 11.6484C6.45505 12.1172 5.68849 12.1172 5.21413 11.6484L0.355654 6.84787C-0.118551 6.37907 -0.118551 5.62149 0.355654 5.15269C0.829935 4.68389 1.59877 4.68389 2.07313 5.15269L6.03761 9.10187L14.929 0.352164C15.4033 -0.117388 16.1699 -0.117388 16.6442 0.352164Z' fill='%23449584'/%3E%3C/svg%3E%0A" );
+			}
+
+			&:not( :last-child ) {
+				margin-bottom: 24px;
+
+				@media ( width <= 860px ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

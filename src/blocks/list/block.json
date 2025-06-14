@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/list",
+	"title": "List",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"list": {
+			"type": "string"
+		},
+		"listType": {
+			"type": "string",
+			"default": "ul"
+		},
+		"listOrientation": {
+			"type": "string",
+			"default": "vertical"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,10 @@
+.interface-interface-skeleton__content {
+	h1.hero__title {
+		font-family: var( --font-poppins );
+		line-height: 48px;
+
+		@media ( width <= 360px ) {
+			font-size: 30px;
+		}
+	}
+}

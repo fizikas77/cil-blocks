@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/tabs",
+  "title": "Tabs with tiles",
+  "category": "mp-blocks",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "selector": ".tabs-block__title .mp-title"
+    },
+    "tabTitleOne": {
+      "type": "string",
+      "default": "Core Specializations"
+    },
+    "tabTitleTwo": {
+      "type": "string",
+      "default": "Niche Areas of Practice"
+    },
+    "repeaterTabOne": {
+      "type": "array",
+      "default": [
+        {
+          "title": "",
+          "text": ""
+        }
+      ]
+    },
+    "repeaterTabTwo": {
+      "type": "array",
+      "default": [
+        {
+          "title": "",
+          "text": ""
+        }
+      ]
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

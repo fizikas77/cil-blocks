@@ -1,0 +1,141 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.featured-links {
+	& + [class*='wp-block-'] {
+		margin-top: 90px;
+		@media ( width <= 920px ) {
+			margin-top: 70px;
+		}
+		@media ( width <= 720px ) {
+			margin-top: 50px;
+		}
+	}
+
+	&__wide {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		@media ( width <= 920px ) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media ( width <= 767px ) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 30px;
+		margin-top: 30px;
+
+		@media ( width <= 1020px ) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media ( width <= 680px ) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__title {
+		@media ( width <= 767px ) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 1fr 46px;
+		gap: 16px;
+		padding: 7px 7px 7px 16px;
+		text-decoration: none;
+		background: rgb( 0 0 0 / 44% );
+		backdrop-filter: blur( 27.5px );
+		border: 1px solid var( --color-white );
+		border-radius: 5px;
+		transition: border-color 0.3s ease;
+
+		&-title {
+			align-self: center;
+			overflow: hidden;
+			font-size: 16px;
+			font-weight: 500;
+			color: var( --color-white );
+			text-overflow: ellipsis;
+			text-wrap: nowrap;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 46px;
+		height: 46px;
+		padding: 0;
+
+		&::before {
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: linear-gradient( 92.83deg, #2a78ff 0%, #184ba3 100% );
+			border-radius: 5px;
+			opacity: 1;
+			transition: opacity 0.3s ease;
+
+			@include abs-center;
+		}
+
+		&::after {
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: var( --color-blue );
+			border-radius: 5px;
+			opacity: 0;
+			transition: all 0.3s ease;
+
+			@include abs-center;
+		}
+
+		.icon {
+			display: block;
+			width: 14px;
+			height: 10px;
+
+			svg {
+				width: 14px;
+				height: 10px;
+				fill: var( --color-white );
+				transition: fill 0.3s ease;
+			}
+		}
+	}
+}
+
+.featured-links__item {
+	@include hover {
+		border-color: var( --color-blue );
+
+		.featured-links__btn {
+			&::before {
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+
+			.icon {
+				svg {
+					fill: var( --color-dark );
+				}
+			}
+		}
+	}
+}

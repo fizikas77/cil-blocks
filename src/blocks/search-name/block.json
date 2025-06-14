@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cil-blocks/search-name",
+	"title": "Search Your Name",
+	"category": "mp-blocks",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": [ "full" ]
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"selector": ".search-name__title"
+		},
+		"info": {
+			"type": "string",
+			"selector": ".search-name__info"
+		},
+		"description": {
+			"type": "string",
+			"selector": ".search-name__description"
+		},
+		"backgroundURL": {
+			"type": "string",
+			"selector": ".search-name__bg img",
+			"attribute": "src"
+		},
+		"backgroundAlt": {
+			"type": "string",
+			"selector": ".search-name__bg img",
+			"attribute": "alt",
+			"default": ""
+		},
+		"backgroundID": {
+			"type": "number"
+		}
+	},
+	"textdomain": "cil-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,86 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.certificate {
+	border-top: 1px solid #d0deff;
+	padding-top: 90px;
+	@media ( width <= 920px ) {
+		padding-top: 70px;
+	}
+	@media ( width <= 767px ) {
+		padding-top: 50px;
+	}
+
+	& + [class*='wp-block-'] {
+		@include margin-block;
+	}
+
+	&__wrap {
+		position: relative;
+		display: grid;
+		grid-template-columns: res( 247px, 400px ) 1fr;
+		gap: res( 20px, 100px );
+		align-items: center;
+
+		@media ( width <= 840px ) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__image {
+		position: relative;
+		max-width: res( 247px, 400px );
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		@media ( width <= 767px ) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__description {
+		margin-bottom: 30px;
+
+		@media ( width <= 767px ) {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: res( 18px, 24px );
+			line-height: 162%;
+			color: var( --color-text );
+		}
+	}
+
+	&__button {
+		@media ( width <= 540px ) {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__planet {
+		position: absolute;
+		top: -100px;
+		right: 0;
+		left: 0;
+		z-index: -1;
+		width: 700px;
+		margin: 0 auto;
+
+		@media ( width <= 890px ) {
+			width: 400px;
+		}
+
+		@media ( width <= 767px ) {
+			@include visually-hidden;
+		}
+
+		@media ( width <= 540px ) {
+			width: 80%;
+		}
+	}
+}

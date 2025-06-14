@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cil-blocks/info",
+  "title": "Info block",
+  "category": "mp-blocks",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": [
+      "full"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "selector": ".cil-info__title"
+    },
+    "description": {
+      "type": "string",
+      "selector": ".cil-info__description"
+    },
+    "list": {
+      "type": "string",
+      "selector": ".cil-info__list"
+    },
+    "text": {
+      "type": "string",
+      "selector": ".cil-info__text"
+    },
+    "imageURL": {
+      "type": "string",
+      "selector": ".cil-info__image img",
+      "attribute": "src"
+    },
+    "imageAlt": {
+      "type": "string",
+      "selector": ".cil-info__image img",
+      "attribute": "alt"
+    },
+    "imageID": {
+      "type": "number"
+    },
+    "backgroundURL": {
+      "type": "string",
+      "selector": ".cil-info__bg img",
+      "attribute": "src"
+    },
+    "backgroundAlt": {
+      "type": "string",
+      "selector": ".cil-info__bg img",
+      "attribute": "alt"
+    },
+    "backgroundID": {
+      "type": "number"
+    }
+  },
+  "textdomain": "cil-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

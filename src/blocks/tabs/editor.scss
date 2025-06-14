@@ -1,0 +1,43 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+.interface-interface-skeleton__content {
+	h3.tabs__card-title {
+		margin-bottom: 10px;
+		font-size: 24px;
+		color: var( --color-dark );
+	}
+	p.tabs__card-text {
+		font-size: 16px;
+		color: var( --color-text );
+	}
+	button.tabs__header-item {
+		padding: 15px 24px;
+		font-size: res( 14px, 18px );
+		font-weight: 500;
+		border-radius: 5px;
+
+		@media ( width <= 767px ) {
+			padding: 15px 18px;
+		}
+
+		@media ( width <= 425px ) {
+			padding: 15px 8px;
+		}
+
+		@media ( width <= 369px ) {
+			width: 100%;
+		}
+
+		@include hover {
+			background: rgb( 0 0 0 / 10% );
+		}
+
+		&--active {
+			color: var( --color-white );
+			background: var( --color-dark );
+
+			@include hover {
+				background: var( --color-dark );
+			}
+		}
+	}
+}

@@ -1,0 +1,122 @@
+@import '../../../../../themes/cil/source/styles/mixins';
+@import '../hero/style.scss';
+.hero-inner {
+	&.hero {
+		padding-top: 80px;
+	}
+
+	.hero__description {
+		p {
+			font-size: res( 18px, 24px );
+			line-height: 120%;
+		}
+	}
+
+	.hero__content {
+		padding-top: 0;
+		padding-bottom: 30px;
+
+		@media ( width <= 980px ) {
+			padding-top: 80px;
+		}
+
+		@media ( width <= 940px ) {
+			padding-top: 50px;
+		}
+
+		@media ( width <= 860px ) {
+			padding: 0;
+			text-align: center;
+		}
+	}
+
+	.hero__image {
+		padding-bottom: 0;
+
+		@media ( width <= 860px ) {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.hero__wrap {
+		align-items: center;
+
+		@media ( width <= 980px ) {
+			align-items: flex-start;
+		}
+
+		@media ( width <= 860px ) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	& + [class*='wp-block-'] {
+		margin-top: res( 50px, 90px );
+	}
+
+	&__tiles {
+		position: absolute !important;
+		right: 0;
+		bottom: -65px;
+		left: 0;
+		display: grid;
+		grid-template-columns: repeat( 3, 1fr );
+		gap: 30px;
+
+		@media ( width <= 1020px ) {
+			gap: 20px;
+		}
+
+		@media ( width <= 720px ) {
+			bottom: -42px;
+			gap: 0;
+			padding: 20px 0;
+			background: #0f131d;
+			border: 1px solid #5c5c5c;
+		}
+	}
+}
+
+.hero__tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 20px 43px;
+	font-family: var( --font-poppins );
+	text-align: center;
+	background: #0f131d;
+	border: 1px solid #5c5c5c;
+
+	@media ( width <= 720px ) {
+		padding: 0 16px;
+		border: 0;
+
+		&--one,
+		&--two {
+			border-right: 1px solid #5c5c5c;
+		}
+	}
+
+	&-title {
+		position: relative;
+		width: max-content;
+		font-size: res( 24px, 32px );
+		font-weight: 700;
+
+		&::after {
+			position: absolute;
+			top: 2px;
+			right: -15px;
+			width: 8px;
+			height: 8px;
+			content: '';
+			background-image: url( "data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.50556 5.20578H5.08356V7.66979H2.77356V5.20578H0.351562V3.00778H2.77356V0.529785H5.08356V3.00778H7.50556V5.20578Z' fill='%238A9BC5'/%3E%3C/svg%3E%0A" );
+		}
+	}
+
+	&-description {
+		font-size: res( 12px, 18px );
+	}
+}
