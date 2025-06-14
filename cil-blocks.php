@@ -8,6 +8,7 @@
  * Author:            Serhii Mykulyn
  * Text Domain:       cil-blocks
  * GitHub Plugin URI: https://github.com/fizikas77/cil-blocks.git
+ * GitHub Branch: main
  *
  */
 
