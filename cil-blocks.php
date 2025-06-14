@@ -1,16 +1,19 @@
 <?php
 /**
  * Plugin Name:       CIL Blocks
- * Description:       Custom cil blocks for the Gutenberg editor.
+ * Plugin URI:        https://github.com/fizikas77/cil-blocks
+ * Description:       Custom CIL blocks for the Gutenberg editor.
+ * Version:           0.2.3
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.2.2
  * Author:            Serhii Mykulyn
+ * Author URI:        https://github.com/fizikas77
  * Text Domain:       cil-blocks
- * GitHub Plugin URI: https://github.com/fizikas77/cil-blocks
- * GitHub Branch: main
  *
+ * GitHub Plugin URI: https://github.com/fizikas77/cil-blocks
+ * GitHub Branch:     main
  */
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
