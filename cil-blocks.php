@@ -4,7 +4,7 @@
  * Description:       Custom cil blocks for the Gutenberg editor.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           0.2.0
  * Author:            Serhii Mykulyn
  * Text Domain:       cil-blocks
  *
