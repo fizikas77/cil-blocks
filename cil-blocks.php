@@ -3,7 +3,7 @@
  * Plugin Name:       CIL Blocks
  * Plugin URI:        https://github.com/fizikas77/cil-blocks
  * Description:       Custom CIL blocks for the Gutenberg editor.
- * Version:           0.2.4
+ * Version:           0.2.5
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Author:            Serhii Mykulyn
