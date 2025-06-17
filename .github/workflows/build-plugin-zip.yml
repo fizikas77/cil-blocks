@@ -1,0 +1,29 @@
+name: Build Plugin Zip
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create plugin directory
+        run: |
+          mkdir -p cil-blocks
+          rsync -av --exclude='.git*' --exclude='.github' ./ ./cil-blocks/
+
+      - name: Create ZIP archive
+        run: |
+          zip -r cil-blocks.zip cil-blocks
+
+      - name: Upload ZIP to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: cil-blocks.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
